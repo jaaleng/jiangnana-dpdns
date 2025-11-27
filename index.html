@@ -6,153 +6,48 @@
     <title>重定向到 jaaleng.github.io</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 50px;
+            background: #f5f5f5;
             color: #333;
             margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .container {
             max-width: 500px;
             margin: 0 auto;
             background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            animation: fadeIn 0.8s ease-out;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .redirect-info {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 25px 0;
-            flex-wrap: wrap;
-        }
-        .domain {
-            background: #f8f9fa;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            margin: 5px;
-            flex: 1;
-            text-align: center;
-            min-width: 200px;
-        }
-        .arrow {
-            font-size: 1.5rem;
-            color: #6c757d;
-            margin: 0 15px;
-        }
-        .new-domain {
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            margin: 5px;
-            flex: 1;
-            text-align: center;
-            min-width: 200px;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         a {
-            display: inline-block;
             color: #007bff;
             text-decoration: none;
-            font-weight: 500;
-            padding: 12px 25px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
         }
         a:hover {
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+            text-decoration: underline;
         }
         .info {
-            margin-top: 25px;
+            margin-top: 20px;
             font-size: 0.9rem;
             color: #666;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 6px;
-        }
-        .loader {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .loader-dot {
-            height: 10px;
-            width: 10px;
-            background: #6a11cb;
-            border-radius: 50%;
-            margin: 0 5px;
-            animation: bounce 1.5s infinite ease-in-out;
-        }
-        .loader-dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .loader-dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        .countdown {
-            margin-top: 15px;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        @media (max-width: 576px) {
-            .container {
-                padding: 30px 20px;
-            }
-            .redirect-info {
-                flex-direction: column;
-            }
-            .arrow {
-                margin: 10px 0;
-                transform: rotate(90deg);
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>正在重定向</h1>
-        <p>您正在从旧域名转向新域名</p>
-        
-        <div class="redirect-info">
-            <div class="domain">jiangnana.dpdns.org</div>
-            <div class="arrow">→</div>
-            <div class="new-domain">jaaleng.github.io</div>
+        <p>从 <strong>jiangnana.dpdns.org</strong> 转到 <strong>jaaleng.github.io</strong></p>
+        <p>如果页面没有自动跳转，请 <a href="https://jaaleng.github.io">点击这里</a>。</p>
+        <div class="info">
+            <p>jiangnana.dpdns.org → jaaleng.github.io</p>
         </div>
-        
-        <div class="loader">
-            <div class="loader-dot"></div>
-            <div class="loader-dot"></div>
-            <div class="loader-dot"></div>
-        </div>
-        
-        <div class="countdown" id="countdown">5秒后自动跳转</div>
-        
-        <p>如果页面没有自动跳转，请 <a href="https://jaaleng.github.io">点击这里<
+    </div>
+    
+    <script>
+        // 立即重定向
+        window.location.replace('https://jaaleng.github.io');
+    </script>
+</body>
+</html>
